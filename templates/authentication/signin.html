@@ -7,12 +7,12 @@
 </head>
 <body>
 <h2>Login</h2>
-    <form method="GET">
-        
-        <label>Username:</label> <input type="text" name="un"/><br>
-        <label>Password:</label><input type="password" name="pwd"/><br>
+    <form  method="POST">
+        {% csrf_token %}
+        <label>Username:</label> <input type="text" name="username"/><br>
+        <label>Password:</label><input type="password" name="pass1"/><br>
         <button type="submit">Submit</button><br>
-        <a href="/signup.html"> New Registration Click Here !!</a>
+        <a href="/signup"> New Registration Click Here !!</a>
 
     </form>
     </div>
